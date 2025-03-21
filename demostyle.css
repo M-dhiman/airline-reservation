@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,14,154,1) 35%, rgba(0,212,255,1) 100%);
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+  
+  .form{
+    display: table;
+}
+p{
+    display: table-row;
+}
+
+.input{
+    display: table-column;
+    margin-left: 50px;
+    padding: 13px;
+    padding-right: 50px;
+    background: transparent;
+    border: 0px;
+    border-radius: 30px;
+    border: 0.5px solid;
+    border-bottom: 2px solid;
+    color: white;
+    
+    
+}
+
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+
+
+.border{
+    display: inline-block;
+    border:  solid;
+    padding: 30px;
+    border-radius: 20px;
+    opacity:0.1;
+    background-color:white ;
+}
+
+
+
+
+.form-box {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 200px;
+    padding: 30px;
+    
+
+}
+label{
+    font-family: initial;
+    font-size: 25px;
+    display: table-cell;
+    padding-left: 10px;
+    font-weight: 900;
+    color : #ffffff;
+    text-shadow: 2px 2px  black;
+   
+    
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1{
+   
+    margin-top: 80px;
+    font-size: 50px;
+    font-weight: 800;
+    box-shadow: 0px 0pc 10px black;
+}
+
+button{
+    width: 200px;
+    padding: 8px;
+    margin: 10px 5px;
+    text-align: center;
+    border-radius: 25px;
+    color: black;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+   
+}
+button:hover{
+    background: rgb(0, 192, 226);
+    transition: 0.5s;
+}
+button:hover{
+    color: white;
+}
+
+.logo{
+    
+    width: 100px;
+    margin-top: 0px;
+    cursor: pointer;
+    border-radius: 100px; 
+    box-shadow: 0px 0px 20px orange;
+}

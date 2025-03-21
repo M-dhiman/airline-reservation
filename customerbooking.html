@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Booking Form</title>
+    <link href="css/customerbooking.css" rel="stylesheet"/>
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const queryArray = queryString.split('&');
+            for (let i = 0; i < queryArray.length; i++) {
+                const pair = queryArray[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+            }
+            return params;
+        }
+
+        function populateForm() {
+            const params = getQueryParams();
+            document.getElementById('from').value = params.source || '';
+            document.getElementById('to').value = params.destination || '';
+            document.getElementById('departure-date').value = params.departureDate || '';
+            document.getElementById('flight-number').value = params.flightNumber || '';
+            document.getElementById('flight-name').value = params.flightName || '';
+            document.getElementById('airline').value = params.airline || '';
+            document.getElementById('departure').value = params.arrivalDate || '';
+            // Add more as required
+        }
+
+        window.onload = populateForm;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="FlightBooking" method="post" class="booking-form">
+            <h1 class="form-title">Airline Booking Form</h1>
+            
+            <div class="section">
+                <h3 class="section-title">Booking Details</h3>
+                <div class="input-group">
+                    <label for="from">From:</label>
+                    <input name="source" type="text" id="from" placeholder="From">
+                </div>
+                <div class="input-group">
+                    <label for="to">To:</label>
+                    <input name="destination" type="text" id="to" placeholder="To">
+                </div>
+                <div class="input-group">
+                    <label for="departure-date">Departure Date & Time:</label>
+                    <input name="departure" type="text" id="departure-date" placeholder="Departure Date">
+                </div>
+                <div class="input-group">
+                    <label for="departure">Arrival Date & Time:</label>
+                    <input name="arrival" type="text" id="departure" placeholder="Departure Time">
+                </div>
+                <div class="input-group">
+                    <label for="airline">Airlines:</label>
+                    <input name="airlines" list="options"  placeholder="Airline" id="airline"/>
+                    <datalist id="options">
+                        <option value="Indigo Airlines">
+                        <option value="Emirates Airline">
+                        <option value="Air India Airlines">
+                        <option value="Air China">
+                        <option value="Air New Zealand Group">
+                    </datalist>
+                </div>
+                <div class="input-group">
+                    <label for="seating-preference">Preferred Seating:</label>
+                    <select name="class" id="seating-preference">
+                        <option value="">Preferred Seating</option>
+                        <option value="Economy Class">Economy Class</option>
+                        <option value="Business Class">Business Class</option>
+                        <option value="First Class">First Class</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="adult">Adult:</label>
+                    <input name="adult" type="number" id="adult" placeholder="Adult">
+                </div>
+                <div class="input-group">
+                    <label for="children">Children (2-11 years):</label>
+                    <input name="children" type="number" id="children" placeholder="Children (2-11 years)">
+                </div>
+                <div class="input-group">
+                    <label for="infant">Infant (under 2 years):</label>
+                    <input name="infant" type="number" id="infant" placeholder="Infant (under 2 years)">
+                </div>
+                <div class="input-group">
+                    <label for="flight-number">Flight Number:</label>
+                    <input name="flightno" type="text" id="flight-number" placeholder="Flight Number">
+                </div>
+                <div class="input-group">
+                    <label for="flight-name">Flight Name:</label>
+                    <input name="flightname" type="text" id="flight-name" placeholder="Flight Name">
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Personal Details</h3>
+                <div class="input-group">
+                    <label for="full-name">Full Name:</label>
+                    <input name="cname" type="text" id="full-name" placeholder="Full Name">
+                </div>
+                <div class="input-group">
+                    <label for="phone-number">Phone Number:</label>
+                    <input name="cphone" type="tel" id="phone-number" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input name="cemail" type="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                    <label for="adhar-number">Enter ID Number:</label>
+                    <input name="cid" type="text" id="adhar-number" placeholder="Enter ID Number">
+                </div>
+                <div class="input-group">
+                    <label for="ticket-no">Enter Number of Tickets:</label>
+                    <input name="totalticket" type="text" id="ticket-no" placeholder="Enter Number of Tickets">
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-submit">Book Now</button>
+                <button type="reset" class="btn btn-reset">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

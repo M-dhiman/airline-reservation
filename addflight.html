@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New Flight</title>
+    <link rel="stylesheet" href="css/addflightstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>REGISTER NEW FLIGHT</h1>
+        <form action="AddFlight" method="post">
+            <div class="form">
+                <div class="input-group">
+                    <label for="t1">Flight Number:</label>
+                    <input type="text" id="t1" name="t1" required>
+                </div>
+                <div class="input-group">
+                    <label for="t2">Flight Name:</label>
+                    <input type="text" id="t2" name="t2" required>
+                </div>
+                <div class="input-group">
+                    <label for="t3">Airline:</label>
+                    <input type="text" id="t3" name="t3" required>
+                </div>
+                <div class="input-group">
+                    <label for="t4">Source (Origin):</label>
+                    <input type="text" id="t4" name="t4" required>
+                </div>
+                <div class="input-group">
+                    <label for="t5">Destination:</label>
+                    <input type="text" id="t5" name="t5" required>
+                </div>
+                <div class="input-group">
+                    <label for="t6">Seat Capacity:</label>
+                    <input type="number" id="t6" name="t6" required>
+                </div>
+                <div class="input-group">
+                    <label for="t7">First Class Ticket Price:</label>
+                    <input type="text" id="t7" name="t7" required>
+                </div>
+                <div class="input-group">
+                    <label for="t8">Economy Class Ticket Price:</label>
+                    <input type="text" id="t8" name="t8" required>
+                </div>
+                <div class="input-group">
+                    <label for="t9">Business Class Ticket Price:</label>
+                    <input type="text" id="t9" name="t9" required>
+                </div>
+                <div class="input-group">
+                    <label for="t10">Departure Date & Time:</label>
+                    <input type="datetime-local" id="t10" name="t10" required>
+                </div>
+                <div class="input-group">
+                    <label for="t11">Arrival Date & Time:</label>
+                    <input type="datetime-local" id="t11" name="t11" required>
+                </div>
+            </div>
+            <button type="submit">Add Flight</button>
+        </form>
+    </div>
+</body>
+</html>

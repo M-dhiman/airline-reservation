@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/mytickets.css"/>
+       
+        <script>
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="full">
+                <div id="mySidebar" class="sidebar">
+           <a class="closebtn" onclick="closeNav()">×</a>
+           <a href="customerhomepage.html">HOME</a>
+           <a href="customerhomepage.html">SEARCH FLIGHT</a>
+           <a href="#">PRINT TICKET</a>
+           <a href="#">HELP</a>
+         </div>
+
+         <div id="main">
+           <button class="openbtn" onclick="openNav()">☰ Option Sidebar</button>  
+           
+          
+         </div>
+            <form  class="example" action="MyTickets" method="post"   style="margin:auto;max-width:300px">
+                  <label><strong>Enter Your Customer Id :</strong></label>  
+                <input type="text" placeholder="Search.." name="cid">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form><br>
+            <center>
+                <form   action="MyTickets" method="post"   style="margin:auto;max-width:300px">
+                    <input type="submit" value="Cancel Ticket"/>
+                </form>
+            </center>
+
+        </div>
+    </body>
+</html>
